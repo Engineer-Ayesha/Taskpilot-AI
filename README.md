@@ -47,21 +47,6 @@ cd Taskpilot-AI
 ## 3. Install dependencies
 ```bash
 npm install
-```
-## 4. Start development server
-```bash
-npm start
-```
-The application will run at:
-```
-http://localhost:3000
-# 🌐 Live Demo
-
-🔗 **TaskPilot AI:**  
-https://taskpilot-ai-app.netlify.app/login
-
----
-
 # 📂 Project Structure
 
 ```text
@@ -88,6 +73,10 @@ src/
 - 📱 Fully Responsive Design
 
 ---
+# 🌐 Live Demo
+
+🔗 **TaskPilot AI:**  
+https://taskpilot-ai-app.netlify.app/login
 
 # 👩‍💻 Developer
 
