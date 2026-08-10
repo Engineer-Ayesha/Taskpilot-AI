@@ -1,25 +1,109 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/navbar";
+import Master from "./components/master";
+import Dashboard from "./components/dashboard";
+import Tasks from "./components/tasks";
+import Calendar from "./components/calendar";
+import Analytics from "./components/analytics";
+import Setting from "./components/setting";
+import Login from "./components/login";
+import Signup from "./components/signup";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import TaskProvider from "./context/taskContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ProtectedRoute from "./components/ProtectedRoute";
+function AppContent() {
+  const location = useLocation();
 
-function App() {
+  const hideNavbar =
+    location.pathname === "/login" ||
+    location.pathname === "/signup";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!hideNavbar && <Navbar />}
+
+      <Routes>
+        <Route path="/" element={<Master />}>
+              <Route
+                index
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/tasks"
+                element={
+                  <ProtectedRoute>
+                    <Tasks />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/calendar"
+                element={
+                  <ProtectedRoute>
+                    <Calendar />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/analytics"
+                element={
+                  <ProtectedRoute>
+                    <Analytics />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/setting"
+                element={
+                  <ProtectedRoute>
+                    <Setting />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/login" element={<Login />} />
+
+<Route path="/signup" element={<Signup />} />
+            </Route>
+      </Routes>
+    </>
   );
 }
+function App() {
+  return (
+    <>
+      <TaskProvider>
 
+        <BrowserRouter>
+          <AppContent />
+        </BrowserRouter>
+
+      </TaskProvider>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2500}
+        theme="colored"
+      />
+    </>
+  );
+}
 export default App;
