@@ -56,7 +56,7 @@ The application will run at:
 ```
 http://localhost:3000
 # 🌐 Deployment
-**Live Demo:**
+**Live Demo:** https://taskpilot-ai-app.netlify.app/login
 # 📂 Project Structure
 src
  ├── components
