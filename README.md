@@ -55,25 +55,44 @@ npm start
 The application will run at:
 ```
 http://localhost:3000
-# 🌐 Deployment
-**Live Demo:** https://taskpilot-ai-app.netlify.app/login
+# 🌐 Live Demo
+
+🔗 **TaskPilot AI:**  
+https://taskpilot-ai-app.netlify.app/login
+
+---
+
 # 📂 Project Structure
-src
- ├── components
- ├── context
- ├── images
- ├── App.js
- └── style.css
-# 🎯 Key Functionalities
-- Secure authentication system
-- Route protection
-- Task CRUD operations
-- Productivity analytics
-- Calendar scheduling
-- Dark mode
-- Responsive UI
-- Persistent data using LocalStorage
+
+```text
+src/
+├── components/
+├── context/
+├── App.js
+├── App.css
+└── index.js
+```
+
+---
+
+# ✨ Key Features
+
+- 🔐 User Authentication (Login & Signup)
+- 🛡️ Protected Routes
+- ✅ Task Management (Create, Edit, Delete)
+- 📅 Calendar View
+- 📊 Productivity Analytics Dashboard
+- 🌙 Dark Mode Support
+- 🔍 Search, Filter & Sort Tasks
+- 💾 LocalStorage Data Persistence
+- 📱 Fully Responsive Design
+
+---
+
 # 👩‍💻 Developer
+
 **Ayesha Khalid**
-- GitHub: https://github.com/Engineer-Ayesha
-- LinkedIn: https://www.linkedin.com/in/engineer-ayesha-4b93683a6/
+
+🔗 GitHub: https://github.com/Engineer-Ayesha
+
+🔗 LinkedIn: https://www.linkedin.com/in/engineer-ayesha-4b93683a6/
